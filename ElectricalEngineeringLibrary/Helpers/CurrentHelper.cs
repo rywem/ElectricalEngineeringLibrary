@@ -26,5 +26,19 @@ namespace ElectricalEngineeringLibrary.Helpers
                 throw new ArgumentException("Voltage must be greater than zero.");
             return power / voltage; // Current (I) = Power (P) / Voltage (V)
         }
+
+        /// <summary>
+        /// A method to calculate the current from a current divider circuit
+        ///</summary>
+        public static double CalculateCurrentFromDivider(double inputCurrent, double resistor1, double resistor2)
+        {
+            if (resistor1 <= 0 || resistor2 <= 0)
+            {
+                throw new ArgumentException("Resistor values must be greater than zero.");
+            }
+            // Current divider formula: Iout = Iin * (R1 / (R1 + R2))
+            double outputCurrent = inputCurrent * (resistor1 / (resistor1 + resistor2));
+            return outputCurrent;
+        }
     }
 }
