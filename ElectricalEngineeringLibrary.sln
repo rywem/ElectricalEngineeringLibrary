@@ -5,7 +5,7 @@ VisualStudioVersion = 17.13.35818.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElectricalEngineeringLibrary", "ElectricalEngineeringLibrary\ElectricalEngineeringLibrary.csproj", "{E9B08CB9-4A75-4D70-A8EB-7718CB9840E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EngineeringConsole", "..\EngineeringConsole\EngineeringConsole.csproj", "{E052B577-A63B-435C-88BC-A50511BF69B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EngineeringConsole", "EngineeringConsole\EngineeringConsole.csproj", "{E052B577-A63B-435C-88BC-A50511BF69B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
