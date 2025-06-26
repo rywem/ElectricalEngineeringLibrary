@@ -1,11 +1,11 @@
-﻿using ElectricalEngineeringHelper.Models;
+﻿using ElectricalEngineeringLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElectricalEngineeringHelper.Math
+namespace ElectricalEngineeringLibrary.Math
 {
     public static class FractionHelper
     {

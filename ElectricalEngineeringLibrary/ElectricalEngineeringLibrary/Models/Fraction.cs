@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElectricalEngineeringHelper.Models
+namespace ElectricalEngineeringLibrary.Models
 {
     public class Fraction
     {

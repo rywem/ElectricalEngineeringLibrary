@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using ElectricalEngineeringHelper.Math;
+using ElectricalEngineeringLibrary.Math;
 using ElectricalEngineeringLibrary.Helpers;
 using EngineeringConsole;
 
