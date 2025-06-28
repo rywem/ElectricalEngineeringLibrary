@@ -27,14 +27,14 @@ namespace ElectricalEngineeringLibrary.Helpers
         {
             if (resistance <= 0 || current < 0)
                 throw new ArgumentException("Resistance must be greater than zero and current must be non-negative.");
-            return Math.Pow(current, 2) * resistance; // Power (P) = I^2 * R
+            return System.Math.Pow(current, 2) * resistance; // Power (P) = I^2 * R
         }
         // a helper method to calculate power in an electrical circuit from voltage and resistance 
         public static double CalculatePowerFromVoltage(double voltage, double resistance)
         {
             if (voltage < 0 || resistance <= 0)
                 throw new ArgumentException("Voltage must be non-negative and resistance must be greater than zero.");
-            return Math.Pow(voltage, 2) / resistance; // Power (P) = V^2 / R
+            return System.Math.Pow(voltage, 2) / resistance; // Power (P) = V^2 / R
         }
     }
 }

@@ -7,12 +7,10 @@ Console.WriteLine("Hello, World!");
 
 
 
-
-for (int i = 1; i < 10; i++)
-{
-    Console.WriteLine(MiscTests.CalculateTotalCurrent((double)i));
-}
-
-
 //Console.WriteLine(FractionHelper.DecimalToFraction(1.5));
-//Console.WriteLine(ResistanceHelper.CalculateParallelResistance(64,64));
+var paralellelResistance = ResistanceHelper.CalculateParallelResistance(1,2);
+var fraction = FractionHelper.DecimalToFraction(paralellelResistance);
+Console.WriteLine(fraction.ToString());
+
+var voltageFromDivider = VoltageHelper.CalculateVoltageFromDivider(3, 1, 2);
+Console.WriteLine(voltageFromDivider);

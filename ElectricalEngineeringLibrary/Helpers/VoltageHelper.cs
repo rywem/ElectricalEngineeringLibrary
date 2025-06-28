@@ -9,7 +9,7 @@ namespace ElectricalEngineeringLibrary.Helpers
     public static class VoltageHelper
     {
         // A method to calculate voltage from a voltage divider circuit
-        public static double CalculateVoltage(double inputVoltage, double resistor1, double resistor2)
+        public static double CalculateVoltageFromDivider(double inputVoltage, double resistor1, double resistor2)
         {
             if (resistor1 <= 0 || resistor2 <= 0)
             {
