@@ -1,15 +1,37 @@
 ﻿using ElectricalEngineeringLibrary.Enums;
-using ElectricalEngineeringLibrary.Extensions;
+using ElectricalEngineeringLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElectricalEngineeringLibrary.Helpers
+namespace ElectricalEngineeringLibrary.Models
 {
     public static class BinaryHelper
     {
+
+        public static int GetBitCount(int number)
+        {
+           
+            int value = number;
+            int count = 0;
+
+            if (value == 0)
+            {
+                count = 1;
+            }
+            else
+            {
+                while (value > 0)
+                {
+                    count++;
+                    value = value / 2;
+                }
+            }
+
+            return count;
+        }
         public static DigitalSignalCollection ConvertBinaryString(string binary)
         {
             if(string.IsNullOrEmpty(binary))
@@ -40,6 +62,26 @@ namespace ElectricalEngineeringLibrary.Helpers
             return binary.ToString();
         }
 
+        public static int ToInteger(string binary)
+        {
+            if (string.IsNullOrEmpty(binary))
+                throw new ArgumentNullException(nameof(binary), "Binary string cannot be null or empty.");
+            if (!IsBinaryString(binary))
+                throw new ArgumentException("Input must be a valid binary string containing only 0s and 1s.", nameof(binary));
+            int result = 0;
+            int negativeSignBit = 1;
+            if (binary[0] == '1')
+                negativeSignBit = -1;
+            // ignore the first character, it is a sign bit
+            for (int i = 1; i < binary.Length; i++)
+            {
+                if (binary[binary.Length - 1 - i] == '1')
+                {
+                    result += (1 << i); // Equivalent to Math.Pow(2, i)
+                }
+            }
+            return result*negativeSignBit;
+        }
         public static string ToBinary(int number, int minBits = 0)
         {
             if (minBits < 0)

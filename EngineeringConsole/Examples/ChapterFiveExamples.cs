@@ -1,6 +1,8 @@
 ﻿using ElectricalEngineeringLibrary.Enums;
+using ElectricalEngineeringLibrary.Extensions;
 using ElectricalEngineeringLibrary.Helpers;
 using ElectricalEngineeringLibrary.Models;
+using ElectricalEngineeringLibrary.Tools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,15 +55,29 @@ namespace EngineeringConsole.Examples
         public static void Ch5OneBitAdder()
         {
             // Example of a one-bit adder using digital signals
-            var x = -17;
-            Console.WriteLine(BinaryHelper.ToBinary(x)); // Convert to binary string
-            Console.WriteLine(BinaryHelper.ToBinary(5));             // 0101
-            Console.WriteLine(BinaryHelper.ToBinary(-5));            // 1101
-            Console.WriteLine(BinaryHelper.ToBinary(5, 8));          // 00000101
-            Console.WriteLine(BinaryHelper.ToBinary(-5, 8));         // 10000101
-            Console.WriteLine(BinaryHelper.ToBinary(5, 2));          // 0101
-            Console.WriteLine(BinaryHelper.ToBinary(0, 4));          // 0000
-            Console.WriteLine(BinaryHelper.ToBinary(0));             // 00
+            //var x = -17;
+            int num1 = 200;
+            int num2 = -3100;
+
+            int num1BitCount = BinaryHelper.GetBitCount(num1);  
+            int num2BitCount = BinaryHelper.GetBitCount(num2);
+            int maxBitCount = Math.Max(num1BitCount, num2BitCount);
+            var collectionNum1 = BinaryHelper.ConvertBinaryString(BinaryHelper.ToBinary(num1, maxBitCount));
+            var collectionNum2 = BinaryHelper.ConvertBinaryString(BinaryHelper.ToBinary(num2, maxBitCount));
+
+            var result = new DigitalSignalCollection();
+            DigitalSignal carryIn = DigitalSignal.Low;
+            for (int i = collectionNum1.Count-1; i > 0; i--)
+            {
+                var adderResult = BinaryAdder.AdderStepSignalHelper(collectionNum1[i], collectionNum2[i], carryIn);
+                result.Add(adderResult.Sum);
+                carryIn = adderResult.CarryOut;
+            }
+            result.Add(carryIn); // Add the final carry out
+            result.Reverse(); // Reverse the result to match the original order
+            var resultString = BinaryHelper.ToBinary(result); // Convert result to binary string
+            var resultInt = BinaryHelper.ToInteger(resultString); // Convert result to integer
+            Console.WriteLine(resultInt);
         }
     }
 }

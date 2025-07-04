@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElectricalEngineeringLibrary.Extensions
+namespace ElectricalEngineeringLibrary.Models
 {
     public class DigitalSignalCollection : List<DigitalSignal>
     {
