@@ -47,7 +47,21 @@ namespace EngineeringConsole.Examples
                     LowThreshold = 2.0
                 }
             };
-            Console.WriteLine(result.ToString());
+            //Console.WriteLine(result.ToString());
+        }
+
+        public static void Ch5OneBitAdder()
+        {
+            // Example of a one-bit adder using digital signals
+            var x = -17;
+            Console.WriteLine(BinaryHelper.ToBinary(x)); // Convert to binary string
+            Console.WriteLine(BinaryHelper.ToBinary(5));             // 0101
+            Console.WriteLine(BinaryHelper.ToBinary(-5));            // 1101
+            Console.WriteLine(BinaryHelper.ToBinary(5, 8));          // 00000101
+            Console.WriteLine(BinaryHelper.ToBinary(-5, 8));         // 10000101
+            Console.WriteLine(BinaryHelper.ToBinary(5, 2));          // 0101
+            Console.WriteLine(BinaryHelper.ToBinary(0, 4));          // 0000
+            Console.WriteLine(BinaryHelper.ToBinary(0));             // 00
         }
     }
 }

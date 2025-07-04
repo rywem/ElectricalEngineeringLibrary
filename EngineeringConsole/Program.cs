@@ -12,9 +12,9 @@ Console.WriteLine("Hello, World!");
 
 // calculate current from current divider 
 
-ChapterFiveExamples.Ch5Point2();
+ChapterFiveExamples.Ch5OneBitAdder();
 
-
+return;
 var currentFromDivider = CurrentHelper.CalculateCurrentFromDivider(1, 1, 1);
 Console.WriteLine($"Current From divider {currentFromDivider}");
 var voltageFromDivider = VoltageHelper.CalculateVoltageFromDivider(2, 1, 1);
