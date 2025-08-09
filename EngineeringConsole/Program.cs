@@ -5,7 +5,7 @@ using EngineeringConsole;
 using EngineeringConsole.Examples;
 using ElectricalEngineeringLibrary.Printers;
 Console.WriteLine("Hello, World!");
-Console.WriteLine(ResistanceHelper.CalculateParallelResistance(10, 15));
+Console.WriteLine(ResistanceHelper.CalculateParallelResistance(2, 1, 4, 2 ));
 
 var factors = FactorHelper.GetFactors(12);
 foreach (var factor in factors)

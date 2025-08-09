@@ -11,7 +11,7 @@ namespace ElectricalEngineeringLibrary.Helpers
         /// <summary>
         /// method to calculate current in an electrical circuit from voltage and resistance
         /// </summary>
-        public static double CalculateCurrent(double voltage, double resistance)
+        public static double CalculateCurrentFromVoltage(double voltage, double resistance)
         {
             if (resistance <= 0)
                 throw new ArgumentException("Resistance must be greater than zero.");
@@ -39,6 +39,18 @@ namespace ElectricalEngineeringLibrary.Helpers
             // Current divider formula: Iout = Iin * (R1 / (R1 + R2))
             double outputCurrent = inputCurrent * (resistor1 / (resistor1 + resistor2));
             return outputCurrent;
+        }
+
+        /// <summary>
+        /// Calculate current, from a voltage, at a node that is connected to multiple resistors in parallel
+        /// </summary>        
+        public static double CalculateCurrentAtNodeWithParallelResistors(double voltage, params double[] resistors)
+        {
+            if (resistors == null || resistors.Length == 0)
+                throw new ArgumentException("At least one resistor value must be provided.");
+            
+            var effectiveResistance = ResistanceHelper.CalculateParallelResistance(resistors); // Ensure resistors are valid
+            return CalculateCurrentFromVoltage(voltage, effectiveResistance); // Use Ohm's law to calculate current
         }
     }
 }

@@ -37,5 +37,17 @@ namespace ElectricalEngineeringLibrary.Helpers
             return current * resistance; // Voltage (V) = Current (I) * Resistance (R)
         }
 
+        /// <summary>
+        /// Calculate voltage, from a current, at a node that is connected to parllel resistors
+        /// </summary>          
+        public static double CalculateVoltageAtNodeWithParallelResistors(double voltage, params double[] resistors)
+        {
+            if (resistors == null || resistors.Length == 0)
+                throw new ArgumentException("At least one resistor value must be provided.");
+
+            var effectiveResistance = ResistanceHelper.CalculateParallelResistance(resistors); // Ensure resistors are valid
+            return CalculateVoltageFromCurrent(voltage, effectiveResistance); // Use Ohm's law to calculate current
+        }
+
     }
 }
