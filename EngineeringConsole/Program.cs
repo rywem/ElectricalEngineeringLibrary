@@ -1,11 +1,18 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using ElectricalEngineeringLibrary.Math;
-using ElectricalEngineeringLibrary.Helpers;
+using Library.ElectricalEngineering.Math;
+using Library.ElectricalEngineering.Helpers;
 using EngineeringConsole;
 using EngineeringConsole.Examples;
-using ElectricalEngineeringLibrary.Printers;
+using Library.ElectricalEngineering.Printers;
 Console.WriteLine("Hello, World!");
-Console.WriteLine(ResistanceHelper.CalculateParallelResistance(2, 1, 4, 2 ));
+//Console.WriteLine(ResistanceHelper.CalculateParallelResistance(2, 1, 4, 2 ));
+
+//var voltage = VoltageHelper.CalculateVoltageFromCurrentAtNodeWithParallelResistors(3, 2, 1, 4, 2);
+/*var current = CurrentHelper.CalculateCurrentFromVoltageAtNodeWithParallelResistors(5, 2, 1, 4, 2);
+var voltage2 = VoltageHelper.CalculateVoltageFromCurrentAtNodeWithParallelResistors(current, 2, 1, 4, 2);
+*/
+var voltageDivider = VoltageHelper.CalculateVoltageFromDivider(5, 2, 4);
+//Console.WriteLine(voltage);
 
 var factors = FactorHelper.GetFactors(12);
 foreach (var factor in factors)

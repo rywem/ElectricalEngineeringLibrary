@@ -1,8 +1,8 @@
-﻿using ElectricalEngineeringLibrary.Enums;
-using ElectricalEngineeringLibrary.Extensions;
-using ElectricalEngineeringLibrary.Helpers;
-using ElectricalEngineeringLibrary.Models;
-using ElectricalEngineeringLibrary.Tools;
+﻿using Library.ElectricalEngineering.Enums;
+using Library.ElectricalEngineering.Extensions;
+using Library.ElectricalEngineering.Helpers;
+using Library.ElectricalEngineering.Models;
+using Library.ElectricalEngineering.Tools;
 using System;
 using System.Collections.Generic;
 using System.Linq;

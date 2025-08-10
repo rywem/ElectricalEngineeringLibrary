@@ -1,11 +1,11 @@
-﻿using ElectricalEngineeringLibrary.Models;
+﻿using Library.ElectricalEngineering.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElectricalEngineeringLibrary.Math
+namespace Library.ElectricalEngineering.Math
 {
     public static class FractionHelper
     {
@@ -87,6 +87,35 @@ namespace ElectricalEngineeringLibrary.Math
                 fractionValue = (decimal)numerator / denominator;
             }
             return new Fraction(sign * numerator, denominator);
+        }
+
+        // Convert a decimal number to a fraction and return as a string in "numerator/denominator" format
+        // dont use any existing methods
+        public static string DecimalToFractionString(double decimalNumber, double tolerance = 1e-10)
+        {
+            if (System.Math.Abs(decimalNumber) < tolerance)
+            {
+                return "0/1";
+            }
+            int sign = System.Math.Sign(decimalNumber);
+            decimalNumber = System.Math.Abs(decimalNumber);
+            int numerator = 1;
+            int denominator = 1;
+            double fractionValue = (double)numerator / denominator;
+            while (System.Math.Abs(fractionValue - decimalNumber) > tolerance)
+            {
+                if (fractionValue < decimalNumber)
+                {
+                    numerator++;
+                }
+                else
+                {
+                    denominator++;
+                    numerator = (int)System.Math.Round(decimalNumber * denominator, MidpointRounding.AwayFromZero);
+                }
+                fractionValue = (double)numerator / denominator;
+            }
+            return $"{sign * numerator}/{denominator}";
         }
     }
 }

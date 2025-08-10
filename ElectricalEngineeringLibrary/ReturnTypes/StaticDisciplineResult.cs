@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElectricalEngineeringLibrary.ReturnTypes
+namespace Library.ElectricalEngineering.ReturnTypes
 {
     public class StaticDisciplineResult
     {

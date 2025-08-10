@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElectricalEngineeringLibrary.Helpers
+namespace Library.ElectricalEngineering.Helpers
 {
     public static class CurrentHelper
     {
@@ -44,7 +44,7 @@ namespace ElectricalEngineeringLibrary.Helpers
         /// <summary>
         /// Calculate current, from a voltage, at a node that is connected to multiple resistors in parallel
         /// </summary>        
-        public static double CalculateCurrentAtNodeWithParallelResistors(double voltage, params double[] resistors)
+        public static double CalculateCurrentFromVoltageAtNodeWithParallelResistors(double voltage, params double[] resistors)
         {
             if (resistors == null || resistors.Length == 0)
                 throw new ArgumentException("At least one resistor value must be provided.");

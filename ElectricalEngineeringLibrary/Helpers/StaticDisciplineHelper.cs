@@ -1,12 +1,12 @@
-﻿using ElectricalEngineeringLibrary.Models;
-using ElectricalEngineeringLibrary.ReturnTypes;
+﻿using Library.ElectricalEngineering.Models;
+using Library.ElectricalEngineering.ReturnTypes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElectricalEngineeringLibrary.Helpers
+namespace Library.ElectricalEngineering.Helpers
 {
     public class StaticDisciplineHelper
     {

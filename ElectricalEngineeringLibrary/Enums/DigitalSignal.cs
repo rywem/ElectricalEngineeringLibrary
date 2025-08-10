@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElectricalEngineeringLibrary.Enums
+namespace Library.ElectricalEngineering.Enums
 {
     public enum DigitalSignal
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElectricalEngineeringLibrary.Math
+namespace Library.ElectricalEngineering.Math
 {
     public class AlgebraHelper
     {

@@ -1,12 +1,12 @@
-﻿using ElectricalEngineeringLibrary.Math;
-using ElectricalEngineeringLibrary.Models;
+﻿using Library.ElectricalEngineering.Math;
+using Library.ElectricalEngineering.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElectricalEngineeringLibrary.Extensions
+namespace Library.ElectricalEngineering.Extensions
 {
     public static class FloatExtensions
     {

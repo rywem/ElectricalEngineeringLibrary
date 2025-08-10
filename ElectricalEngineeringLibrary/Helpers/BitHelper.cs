@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElectricalEngineeringLibrary.Helpers
+namespace Library.ElectricalEngineering.Helpers
 {
     internal class BitHelper
     {

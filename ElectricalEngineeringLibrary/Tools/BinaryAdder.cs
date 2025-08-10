@@ -1,13 +1,13 @@
-﻿using ElectricalEngineeringLibrary.Enums;
-using ElectricalEngineeringLibrary.Helpers;
-using ElectricalEngineeringLibrary.Models;
+﻿using Library.ElectricalEngineering.Enums;
+using Library.ElectricalEngineering.Helpers;
+using Library.ElectricalEngineering.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElectricalEngineeringLibrary.Tools
+namespace Library.ElectricalEngineering.Tools
 {
     public static class BinaryAdder
     {

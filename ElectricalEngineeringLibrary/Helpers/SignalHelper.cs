@@ -1,11 +1,11 @@
-﻿using ElectricalEngineeringLibrary.Enums;
+﻿using Library.ElectricalEngineering.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElectricalEngineeringLibrary.Helpers
+namespace Library.ElectricalEngineering.Helpers
 {
     public static class SignalHelper
     {
