@@ -5,6 +5,10 @@ using EngineeringConsole;
 using EngineeringConsole.Examples;
 using Library.ElectricalEngineering.Printers;
 Console.WriteLine("Hello, World!");
+Console.WriteLine(FractionHelper.DecimalToFractionString(1.5));
+Console.WriteLine(FractionHelper.DecimalToFractionString(0.5));
+Console.WriteLine(FractionHelper.DecimalToFractionString(0.005));
+Console.WriteLine(FractionHelper.DecimalToFractionString(0.02325));
 //Console.WriteLine(ResistanceHelper.CalculateParallelResistance(2, 1, 4, 2 ));
 
 //var voltage = VoltageHelper.CalculateVoltageFromCurrentAtNodeWithParallelResistors(3, 2, 1, 4, 2);
