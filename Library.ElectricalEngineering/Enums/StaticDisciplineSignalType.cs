@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library.ElectricalEngineering.Enums
+namespace RW.Library.ElectricalEngineering.Enums
 {
     public enum StaticDisciplineSignalType
     {

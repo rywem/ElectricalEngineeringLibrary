@@ -1,4 +1,4 @@
-﻿namespace Library.ElectricalEngineering.Helpers
+﻿namespace RW.Library.ElectricalEngineering.Helpers
 {
     public class ResistanceHelper
     {

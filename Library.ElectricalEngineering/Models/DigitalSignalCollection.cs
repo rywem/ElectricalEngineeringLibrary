@@ -1,11 +1,11 @@
-﻿using Library.ElectricalEngineering.Enums;
+﻿using RW.Library.ElectricalEngineering.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library.ElectricalEngineering.Models
+namespace RW.Library.ElectricalEngineering.Models
 {
     public class DigitalSignalCollection : List<DigitalSignal>
     {

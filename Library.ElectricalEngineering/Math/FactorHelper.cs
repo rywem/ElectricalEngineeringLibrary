@@ -1,11 +1,11 @@
-﻿using Library.ElectricalEngineering.Models;
+﻿using RW.Library.ElectricalEngineering.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library.ElectricalEngineering.Math
+namespace RW.Library.ElectricalEngineering.Math
 {
     public static class FactorHelper
     {

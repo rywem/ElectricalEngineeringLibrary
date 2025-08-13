@@ -1,12 +1,12 @@
-﻿using Library.ElectricalEngineering.Math;
-using Library.ElectricalEngineering.Models;
+﻿using RW.Library.ElectricalEngineering.Math;
+using RW.Library.ElectricalEngineering.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library.ElectricalEngineering.Extensions
+namespace RW.Library.ElectricalEngineering.Extensions
 {
     public static class DecimalExtensions
     {

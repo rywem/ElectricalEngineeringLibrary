@@ -1,12 +1,12 @@
-﻿using Library.ElectricalEngineering.Enums;
-using Library.ElectricalEngineering.Models;
+﻿using RW.Library.ElectricalEngineering.Enums;
+using RW.Library.ElectricalEngineering.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library.ElectricalEngineering.Models
+namespace RW.Library.ElectricalEngineering.Models
 {
     public static class BinaryHelper
     {

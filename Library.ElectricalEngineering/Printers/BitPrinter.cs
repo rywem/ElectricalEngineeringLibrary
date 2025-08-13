@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library.ElectricalEngineering.Printers
+namespace RW.Library.ElectricalEngineering.Printers
 {
     public class BitPrinter
     {

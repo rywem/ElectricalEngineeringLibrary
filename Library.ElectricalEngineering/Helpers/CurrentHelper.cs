@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library.ElectricalEngineering.Helpers
+namespace RW.Library.ElectricalEngineering.Helpers
 {
     public static class CurrentHelper
     {

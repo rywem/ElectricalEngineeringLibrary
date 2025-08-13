@@ -1,9 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using Library.ElectricalEngineering.Math;
-using Library.ElectricalEngineering.Helpers;
+using RW.Library.ElectricalEngineering.Math;
+using RW.Library.ElectricalEngineering.Helpers;
 using EngineeringConsole;
 using EngineeringConsole.Examples;
-using Library.ElectricalEngineering.Printers;
+using RW.Library.ElectricalEngineering.Printers;
 Console.WriteLine("Hello, World!");
 Console.WriteLine(FractionHelper.DecimalToFractionString(1.5));
 Console.WriteLine(FractionHelper.DecimalToFractionString(0.5));

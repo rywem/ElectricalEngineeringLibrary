@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ElectricalEngineeringLibrary\Library.ElectricalEngineering.csproj" />
+    <ProjectReference Include="..\ElectricalEngineeringLibrary\RW.Library.ElectricalEngineering.csproj" />
   </ItemGroup>
 
 </Project>
